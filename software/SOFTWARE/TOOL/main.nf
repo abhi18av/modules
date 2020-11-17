@@ -46,7 +46,7 @@ process SOFTWARE_TOOL {
     //               You may need to double-check that you are using the latest version of the software because you may find that containers for older versions have been rebuilt more recently.
     //               If required, multi-tool containers may also be available and are usually named to start with "mulled".
     container "quay.io/biocontainers/samtools:1.10--h9402c20_2"
-    
+
     input:
     // TODO nf-core: Where applicable all sample-specific information e.g. "id", "single_end", "read_group"
     //               MUST be provided as an input via a Groovy Map called "meta".
@@ -55,7 +55,7 @@ process SOFTWARE_TOOL {
     // TODO nf-core: Where applicable please provide/convert compressed files as input/output
     //               e.g. "*.fastq.gz" and NOT "*.fastq", "*.bam" and NOT "*.sam" etc.
     tuple val(meta), path(reads)
-    
+
     output:
     // TODO nf-core: Named file extensions MUST be emitted for ALL output channels
     // TODO nf-core: If meta is provided in "input:" section then it MUST be added to ALL output channels (except version)

@@ -15,7 +15,7 @@ process GFFREAD {
 
     input:
     path gff
-    
+
     output:
     path "*.gtf"        , emit: gtf
     path "*.version.txt", emit: version

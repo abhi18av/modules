@@ -17,7 +17,7 @@ process DEEPTOOLS_COMPUTEMATRIX {
     input:
     tuple val(meta), path(bigwig)
     path  bed
-    
+
     output:
     tuple val(meta), path("*.mat.gz") , emit: matrix
     tuple val(meta), path("*.mat.tab"), emit: table

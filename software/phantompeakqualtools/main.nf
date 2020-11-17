@@ -18,7 +18,7 @@ process PHANTOMPEAKQUALTOOLS {
 
     input:
     tuple val(meta), path(bam)
-    
+
     output:
     tuple val(meta), path("*.out")  , emit: spp
     tuple val(meta), path("*.pdf")  , emit: pdf

@@ -11,12 +11,12 @@ process BWA_INDEX {
         mode: params.publish_dir_mode,
         saveAs: { filename -> saveFiles(filename:filename, options:params.options, publish_dir:getSoftwareName(task.process), publish_id:'') }
 
-    conda     (params.enable_conda ? "bioconda::bwa=0.7.17" : null) 
+    conda     (params.enable_conda ? "bioconda::bwa=0.7.17" : null)
     container "biocontainers/bwa:v0.7.17_cv1"
-    
+
     input:
     path fasta
-    
+
     output:
     path "${fasta}.*"   , emit: index
     path "*.version.txt", emit: version

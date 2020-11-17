@@ -13,10 +13,10 @@ process DEEPTOOLS_PLOTPROFILE {
 
     conda     (params.enable_conda ? "bioconda::deeptools=3.4.3" : null)
     container "quay.io/biocontainers/deeptools:3.4.3--py_0"
-    
+
     input:
     tuple val(meta), path(matrix)
-    
+
     output:
     tuple val(meta), path("*.pdf"), emit: pdf
     tuple val(meta), path("*.tab"), emit: table

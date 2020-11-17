@@ -16,7 +16,7 @@ process PICARD_MERGESAMFILES {
 
     input:
     tuple val(meta), path(bams)
- 
+
     output:
     tuple val(meta), path("*.bam"), emit: bam
     path  "*.version.txt"         , emit: version

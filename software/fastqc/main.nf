@@ -13,10 +13,10 @@ process FASTQC {
 
     conda     (params.enable_conda ? "bioconda::fastqc=0.11.9" : null)
     container "quay.io/biocontainers/fastqc:0.11.9--0"
-    
+
     input:
     tuple val(meta), path(reads)
-    
+
     output:
     tuple val(meta), path("*.html"), emit: html
     tuple val(meta), path("*.zip") , emit: zip

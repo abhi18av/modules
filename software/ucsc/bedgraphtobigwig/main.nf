@@ -19,7 +19,7 @@ process UCSC_BEDRAPHTOBIGWIG {
     input:
     tuple val(meta), path(bedgraph)
     path  sizes
-    
+
     output:
     tuple val(meta), path("*.bigWig"), emit: bigwig
     path "*.version.txt"             , emit: version

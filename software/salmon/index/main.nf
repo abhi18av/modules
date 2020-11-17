@@ -22,7 +22,7 @@ process SALMON_INDEX {
     path "*.version.txt", emit: version
 
     script:
-    def software = getSoftwareName(task.process) 
+    def software = getSoftwareName(task.process)
     """
     salmon \\
         index \\

@@ -18,7 +18,7 @@ process SALMON_QUANT {
     tuple val(meta), path(reads)
     path  index
     path  gtf
-    
+
     output:
     tuple val(meta), path("${prefix}"), emit: results
     path  "*.version.txt"             , emit: version

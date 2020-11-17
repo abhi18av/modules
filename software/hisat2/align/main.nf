@@ -20,7 +20,7 @@ process HISAT2_ALIGN {
     tuple val(meta), path(reads)
     path  index
     path  splicesites
-    
+
     output:
     tuple val(meta), path("*.bam"), emit: bam
     tuple val(meta), path("*.log"), emit: summary

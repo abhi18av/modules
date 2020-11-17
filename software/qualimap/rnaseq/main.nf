@@ -17,7 +17,7 @@ process QUALIMAP_RNASEQ {
     input:
     tuple val(meta), path(bam)
     path  gtf
-    
+
     output:
     tuple val(meta), path("${prefix}"), emit: results
     path  "*.version.txt"             , emit: version
