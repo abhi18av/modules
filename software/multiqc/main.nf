@@ -15,7 +15,7 @@ process MULTIQC {
     container "quay.io/biocontainers/multiqc:1.9--py_1"
 
     input:
-    tuple path(fastqc_html), path(fastqc_zip)
+    path(generic_report)
 
     output:
     path("multiqc_data"), emit: dir
